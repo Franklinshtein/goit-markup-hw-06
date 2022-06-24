@@ -611,7 +611,8 @@ p {
   border-radius: 4px;
   align-items: center;
   justify-content: center;
-  transition: border-color 250ms var(--timing-function), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms var(--timing-function),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -684,6 +685,55 @@ address ul {
   outline: none;
 }
 
+.subscribe-us {
+  margin-left: 93px;
+}
+.subscribe-input {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#email {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  padding-top: 15px;
+  height: 50px;
+  width: 358px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 12px;
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
+}
+.subscribe-icon {
+  margin-left: 10px;
+}
+.justify-btn {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 /* стилі модального вікна */
 .backdrop {
   position: fixed;
@@ -711,10 +761,31 @@ address ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding-top: 40px;
+  width: 528px;
+  height: 581px;
+
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.modal-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(20 / 23);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
 
 .modal-close-btn {
   position: absolute;
+  display: block;
   right: 8px;
   top: 8px;
   display: flex;
@@ -722,6 +793,153 @@ address ul {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  border: transparent;
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 30px;
+  width: 30px;
+}
+
+.modal-form {
+  padding: 0 40px;
+}
+
+.user-data {
+  display: block;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: #757575;
+  margin-top: 10px;
+}
+
+#comment {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  padding: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+#comment::placeholder {
+color: rgba(117, 117, 117, 0.5);
+}
+
+.user-data::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 30px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+/* відміна стандартного outline від браузера при фокусі */
+.modal-input:focus-visible {
+  outline: 1px solid var(--accent-color);
+}
+
+#comment:focus-visible {
+  outline: 1px solid var(--accent-color);
+}
+
+/* стилі outline */
+.modal-input:focus,
+.modal-input:hover {
+  border-color: var(--accent-color);
+}
+
+.modal-input:focus,
+.modal-input:hover + .form-icon {
+  fill: var(--accent-color);
+}
+
+.input-wrapper {
+  position: relative;
+  align-items: center;
+}
+
+.terms-of-use {
+  display: flex;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.check-icon {
+fill:transparent;
+}
+
+.terms-check:checked + .chek-text {
+  background-color: var(--accent-color);
+  border:none;
+}
+
+.terms-check:checked + .chek-text .check-icon {
+fill: #ffffff;
+border-radius: 2px;
+}
+
+
+.chek-text {
+  margin-left: 4px;
+}
+
+.chek-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+
+  border: 1px solid #212121;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.terms-of-use-link {
+  margin-left: 4px;
+  color: var(--accent-color);
+}
+
+.btn-send {
+  display: flex;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border: none;
+  border-radius: 4px;
+  transition: background-color 250ms var(--timing-function),
+    filter 250ms var(--timing-function);
+}
+
+.btn-send:hover {
+  background-color: var(--accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
