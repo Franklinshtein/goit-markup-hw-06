@@ -687,10 +687,10 @@ address ul {
 }
 
 .subscribe-us {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .subscribe-input {
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
 }
 
 #email {
@@ -725,6 +725,14 @@ address ul {
   color: #ffffff;
   cursor: pointer;
 }
+
+.footer-btn:hover,
+.footer-btn:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 .subscribe-icon {
   margin-left: 10px;
 }
@@ -802,6 +810,11 @@ address ul {
   width: 30px;
 }
 
+.modal-close-btn:hover {
+  fill: var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-form {
   padding: 0 40px;
 }
@@ -833,7 +846,7 @@ address ul {
 }
 
 #comment::placeholder {
-color: rgba(117, 117, 117, 0.5);
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .user-data::placeholder {
@@ -866,16 +879,20 @@ color: rgba(117, 117, 117, 0.5);
 }
 
 /* стилі outline */
-.modal-input:focus,
-.modal-input:hover {
+.modal-input:focus {
   border-color: var(--accent-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:focus,
-.modal-input:hover + .form-icon {
+.modal-input:focus + .form-icon {
   fill: var(--accent-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.terms-of-use:focus,
+.terms-of-use:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 .input-wrapper {
@@ -894,22 +911,17 @@ color: rgba(117, 117, 117, 0.5);
   align-items: center;
 }
 .check-icon {
-fill:transparent;
+  fill: transparent;
 }
 
 .terms-check:checked + .chek-text {
   background-color: var(--accent-color);
-  border:none;
+  border: none;
 }
 
 .terms-check:checked + .chek-text .check-icon {
-fill: #ffffff;
-border-radius: 2px;
-}
-
-
-.chek-text {
-  margin-left: 4px;
+  fill: #ffffff;
+  border-radius: 2px;
 }
 
 .chek-text {
@@ -927,6 +939,12 @@ border-radius: 2px;
 .terms-of-use-link {
   margin-left: 4px;
   color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.terms-of-use-link:hover,
+.terms-of-use-link:focus {
+  text-decoration: none;
 }
 
 .btn-send {
@@ -942,8 +960,9 @@ border-radius: 2px;
     filter 250ms var(--timing-function);
 }
 
-.btn-send:hover {
-  background-color: var(--accent-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.btn-send:hover,
+.btn-send:focus {
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
