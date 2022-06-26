@@ -889,12 +889,6 @@ address ul {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.terms-of-use:focus,
-.terms-of-use:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
 .input-wrapper {
   position: relative;
   align-items: center;
@@ -924,14 +918,18 @@ address ul {
   border-radius: 2px;
 }
 
+.terms-check:focus + .chek-text {
+  border-color: var(--accent-color);
+}
+
 .chek-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 15px;
+  width: 16px;
   height: 15px;
 
-  border: 1px solid #212121;
+  border: 2px solid #212121;
   border-radius: 2px;
   margin-right: 4px;
 }
